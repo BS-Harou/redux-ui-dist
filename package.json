@@ -1,0 +1,32 @@
+{
+  "name": "redux-ui-dist",
+  "version": "0.1.0",
+  "description": "Creates dist files for redux-ui on npm run build",
+  "scripts": {
+    "build": "npm run build:umd && npm run build:umd:min",
+    "build:umd": "node ./node_modules/cross-env/bin/cross-env.js NODE_ENV=development ./node_modules/webpack/bin/webpack.js ./node_modules/redux-ui/transpiled/index.js dist/redux-ui.js",
+    "build:umd:min": "node ./node_modules/cross-env/bin/cross-env.js NODE_ENV=production ./node_modules/webpack/bin/webpack.js ./node_modules/redux-ui/transpiled/index.js dist/redux-ui.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BS-Harou/redux-ui-dist.git"
+  },
+  "keywords": [
+    "redux",
+    "redux-ui",
+    "dist"
+  ],
+  "author": "Socialbakers",
+  "license": "©socialbakers",
+  "devDependencies": {
+    "cross-env": "^1.0.8",
+    "redux-ui": "0.0.15",
+    "webpack": "^1.13.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0",
+    "redux": "^3.0.0",
+    "immutable": "^3.8.1",
+    "react-redux": "^4.4.5"
+  }
+}
